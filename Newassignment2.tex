@@ -1,0 +1,463 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\title{ASSIGNMENT 2 }
+\author{Showqeen Yousuf}
+\date{\today}
+\maketitle
+
+\begin{itemize}
+\item{{Question:{\textit{ Find the Inverse and QR Decomposition of the\\ following.}}}}\\
+
+\newpage
+{\textit{Exercise 2.97:}}
+\[
+A=
+\begin{pmatrix}
+3 & 10\\
+2 & 7
+\end{pmatrix}
+\]
+
+\item{\textbf{Solution:}}\\
+
+INVERSE OF A:\\
+
+We are given with a matrix 
+\[
+A=
+\begin{pmatrix}
+3 & 10\\
+2 & 7
+\end{pmatrix}
+\]
+
+Now,\\
+
+DetA=
+ $$
+ 21 - 20=1\\
+ $$
+ 
+Also,\\
+
+\[
+AdjA=
+\begin{pmatrix}
+7 & -10\\
+-2 & 3
+\end{pmatrix}
+\]
+Now,\\
+
+A^{-1}, can \hspace{0.3 cm}be \hspace{0.3 cm}calculated \hspace{0.3 cm}by \hspace{0.3 cm}the \hspace{0.3 cm}formula,\\
+
+A^{-1}= AdjA/DetA\\
+
+Therefore, 
+
+\[
+A^{-1}=
+\begin{pmatrix}
+7 & -10\\
+-2 & 3
+\end{pmatrix}
+\]
+\newpage
+QR DECOMPOSITION OF A:\\
+
+The QR Decomposition of a matrix is a decomposition of the matrix into an orthogonal matrix and an upper triangular matrix. A QR decomposition of a real square matrix A is a decomposition of A as,\\
+
+$$ A=QR$$
+ where Q is the orthogonal matrix and R is the upper triangular matrix.\\
+ 
+ Given\\
+ \[
+A=
+\begin{pmatrix}
+3 & 10\\
+2 & 7
+\end{pmatrix}
+\]
+
+Let a and b be the column vectors of the given matrix such that,\\
+
+\[
+a=
+\begin{pmatrix}
+3\\
+2
+\end{pmatrix}
+\]
+\\
+\[
+b=
+\begin{pmatrix}
+10\\
+7
+\end{pmatrix}
+\]
+
+
+The above vectors can be expressed as:\\
+
+$$
+a=t_1u_1\\
+
+\hspace{5 cm}b=s_1u_1+t_2u_2
+$$
+
+where,\\
+
+$$
+t_1=||a||\\
+
+\hspace{5 cm}u_1=a/t_1\\
+
+\hspace{5 cm}s_1=u_1^{T}*b/||u_1||^{2}\\
+
+\hspace{5 cm}u_2=b-s_1*u_1/||b-s_1u_1||\\
+
+\hspace{5 cm}t_2=u_2^{T}b
+$$
+
+The Values of a and b can be written as,\\
+
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1 & u_2
+\end{pmatrix}
+*
+\begin{pmatrix}
+t_1 & s_1\\
+0   & t_2
+\end{pmatrix}
+\]
+
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+QR
+\]
+
+and, $$Q^{T}*Q=I$$\\
+
+
+$$Now, \hspace{0.1 cm}using \hspace{0.1 cm}the \hspace{0.1 cm}equations \hspace{0.1 cm}of \hspace{0.1 cm}t_1, u_1, s_1,u_2 \hspace{0.1 cm}and \hspace{0.1 cm}t_2 \hspace{0.1 cm}we\\
+\hspace{0.1 cm}get \hspace{0.1 cm}the \hspace{0.1 cm}values \hspace{0.1 cm}of \hspace{0.1 cm}t_1, u_1, s_1,u_2 \hspace{0.1 cm}and \hspace{0.1 cm}t_2 $$\\
+
+$$
+t_1=\sqrt{3^2+2^2}=\sqrt{13}
+$$\\
+\[
+u_1=1/\sqrt{13}
+*
+\begin{pmatrix}
+3\\
+2
+\end{pmatrix}
+\]\\
+\[
+s_1
+=
+\begin{pmatrix}
+3/\sqrt{13} & 2/\sqrt{13}
+\end{pmatrix}
+*
+\[
+\begin{pmatrix}
+10\\
+7
+\end{pmatrix}
+\]\\
+
+$$
+\hspace{5 cm}s_1=44/\sqrt{13}
+$$\\
+
+\[
+u_2=1/\sqrt{13}
+\begin{pmatrix}
+-2\\
+3
+\end{pmatrix}
+\]
+
+\[
+t_2
+=
+\begin{pmatrix}
+-2/\sqrt{13} & 3/\sqrt{13}
+\end{pmatrix}
+*
+\begin{pmatrix}
+10\\
+7
+\end{pmatrix}
+\]\\
+$$
+t_2= -20/\sqrt{13}+ (21\sqrt{13})\\
+
+\hspace{5 cm}t_2=1/\sqrt{13}
+$$\\
+
+
+$$substituting \hspace{0.2 cm}the \hspace{0.2 cm}values \hspace{0.2 cm}of \hspace{0.2 cm}t_1, u_1, s_1,u_2 \hspace{0.2 cm}and \hspace{0.2 cm}t_2 \hspace{0.2 cm}in \hspace{0.2 cm}the \hspace{0.2 cm}matrix$$
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+QR
+\]
+$$we \hspace{0.3 cm}get \hspace{0.3 cm}the \hspace{0.3 cm}required \hspace{0.3 cm}QR \hspace{0.3 cm}decomposition \hspace{0.3 cm}of \hspace{0.3 cm}A.$$\\
+
+\[
+\begin{pmatrix}
+3 & 10\\
+2 & 7
+\end{pmatrix}
+=
+\begin{pmatrix}
+3/\sqrt{13} & -2/\sqrt{13}\\
+2/\sqrt{13} & 3/\sqrt{13}
+\end{pmatrix}
+*
+\begin{pmatrix}
+\sqrt{13} & 44/\sqrt{13}\\
+0 & 1/\sqrt{13}
+\end{pmatrix}
+\]\\
+\newpage
+{\textit{Exercise 2.98:}}
+\[
+A=
+\begin{pmatrix}
+3 & -1\\
+-4 & 2
+\end{pmatrix}
+\]
+
+\item{\textbf{Solution:}}\\
+
+INVERSE OF A:\\
+
+We are given with a matrix 
+\[
+A=
+\begin{pmatrix}
+3 & -1\\
+-4 & 2
+\end{pmatrix}
+\]
+
+Now,\\
+
+DetA=
+ $$
+ 6 - 4=2\\
+$$
+
+Also,\\
+
+\[
+AdjA=
+\begin{pmatrix}
+2  & 1\\
+-4 & 2
+\end{pmatrix}
+\]
+Now,\\
+
+A^{-1}, can \hspace{0.3 cm}be \hspace{0.3 cm}calculated \hspace{0.3 cm}by \hspace{0.3 cm}the \hspace{0.3 cm}formula,\\
+
+A^{-1}= AdjA/DetA\\
+
+Therefore, 
+
+\[
+A^{-1}=
+\begin{pmatrix}
+1  & 1/2\\
+2 & 3/2
+\end{pmatrix}
+\]
+\newpage
+QR DECOMPOSITION OF A:\\
+
+The QR Decomposition of a matrix is a decomposition of the matrix into an orthogonal matrix and an upper triangular matrix. A QR decomposition of a real square matrix A is a decomposition of A as,\\
+
+$$ A=QR$$
+ where Q is the orthogonal matrix and R is the upper triangular matrix.\\
+ 
+ Given\\
+ \[
+A=
+\begin{pmatrix}
+3 & -1\\
+-4 & 2
+\end{pmatrix}
+\]
+
+Let a and b be the column vectors of the given matrix such that,\\
+
+\[
+a=
+\begin{pmatrix}
+3\\
+-4
+\end{pmatrix}
+\]
+\\
+\[
+b=
+\begin{pmatrix}
+-1\\
+2
+\end{pmatrix}
+\]
+
+
+The above vectors can be expressed as:\\
+
+$$
+a=t_1u_1\\
+
+\hspace{5 cm}b=s_1u_1+t_2u_2
+$$
+
+where,\\
+
+$$
+t_1=||a||\\
+
+\hspace{5 cm}u_1=a/t_1\\
+
+\hspace{5 cm}s_1=u_1^{T}*b/||u_1||^{2}\\
+
+\hspace{5 cm}u_2=b-s_1*u_1/||b-s_1u_1||\\
+
+\hspace{5 cm}t_2=u_2^{T}b
+$$
+
+The Values of a and b can be written as,\\
+
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1 & u_2
+\end{pmatrix}
+*
+\begin{pmatrix}
+t_1 & s_1\\
+0   & t_2
+\end{pmatrix}
+\]
+
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+QR
+\]
+
+and, $$Q^{T}*Q=I$$\\
+
+
+$$Now, \hspace{0.1 cm}using \hspace{0.1 cm}the \hspace{0.1 cm}equations \hspace{0.1 cm}of \hspace{0.1 cm}t_1, u_1, s_1,u_2 \hspace{0.1 cm}and \hspace{0.1 cm}t_2 \hspace{0.1 cm}we\\
+\hspace{0.1 cm}get \hspace{0.1 cm}the \hspace{0.1 cm}values \hspace{0.1 cm}of \hspace{0.1 cm}t_1, u_1, s_1,u_2 \hspace{0.1 cm}and \hspace{0.1 cm}t_2 $$\\
+
+$$
+t_1=\sqrt{3^2+4^2}=5
+$$\\
+\[
+u_1=1/5
+*
+\begin{pmatrix}
+3\\
+-4
+\end{pmatrix}
+\]\\
+\[
+s_1
+=
+\begin{pmatrix}
+3/5 & -4/5
+\end{pmatrix}
+*
+\[
+\begin{pmatrix}
+-1\\
+2
+\end{pmatrix}
+\]\\
+$$
+\hspace{5 cm}s_1=-11/5
+$$\\
+
+\[
+u_2=1/5
+*
+\begin{pmatrix}
+4\\
+3
+\end{pmatrix}
+\]
+
+\[
+t_2
+=
+\begin{pmatrix}
+4/5 & 3/5
+\end{pmatrix}
+*
+\begin{pmatrix}
+-1\\
+2
+\end{pmatrix}
+\]\\
+$$
+t_2= 4/5+ 6/5\\
+
+\hspace{5 cm}t_2=2/5
+$$\\
+
+
+$$substituting \hspace{0.2 cm}the \hspace{0.2 cm}values \hspace{0.2 cm}of \hspace{0.2 cm}t_1, u_1, s_1,u_2 \hspace{0.2 cm}and \hspace{0.2 cm}t_2 \hspace{0.2 cm}in \hspace{0.2 cm}the \hspace{0.2 cm}matrix$$
+\[
+\begin{pmatrix}
+a & b
+\end{pmatrix}
+=
+QR
+\]
+$$we \hspace{0.3 cm}get \hspace{0.3 cm}the \hspace{0.3 cm}required \hspace{0.3 cm}QR \hspace{0.3 cm}decomposition \hspace{0.3 cm}of \hspace{0.3 cm}A.$$\\
+
+\[
+\begin{pmatrix}
+3 & -1\\
+-4 & 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+3/5 & 4/5\\
+-4/5 & 3/5
+\end{pmatrix}
+*
+\begin{pmatrix}
+5 & -11/5\\
+0 & 2/5
+\end{pmatrix}
+\]
+\end{itemize}
+\end{document}
